@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¿Quieres ser mi San Valentín amor de mi vida? 💖</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSecWuzmZFHYgoAJgDh5iVKCOOhZHnxveknmA&s') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .btn {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-yes {
+            background: #ff4d79;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background: #ff1a57;
+        }
+
+        .btn-no {
+            background: #fff;
+            color: black;
+            position: absolute;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? 💘</h1>
+        <p>Eres lo mejor que me ha pasado, y quiero pasar este día junto a mi en este dia especial contigo. 🥰</p>
+        <div class="btn-container">
+            <button class="btn btn-yes" onclick="aceptar()">¡Sí, quiero! 💖</button>
+            <button class="btn btn-no" id="noButton" onmouseover="moverNo()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! Te amo mucho amor de mi vida y de mi corazon mujer de mis ojos 😍💖");
+        }
+
+        function moverNo() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            let noButton = document.getElementById("noButton");
+            noButton.style.position = "absolute";
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
